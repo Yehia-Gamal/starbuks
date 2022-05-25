@@ -47,7 +47,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ebebeb;
   z-index: 10;
 }
 header .logo {
@@ -58,8 +57,12 @@ header ul li {
   margin-left: 30px;
 }
 header ul li a {
-  color: #fff;
+  color: #333;
   font-weight: 600;
+}
+
+header ul li a:hover {
+  color: #017143;
 }
 
 .content {
@@ -135,7 +138,7 @@ header ul li a {
 }
 
 .social {
-  position: absolute;
+  position: fixed;
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
@@ -149,7 +152,8 @@ header ul li a {
   display: inline-block;
   margin: 5px 0;
   transform: scale(0.6);
-  filter: invert(1);
+  color: #fff;
+  font-size: 40px;
   transition: 0.5s;
 }
 .social li a:hover {
@@ -240,9 +244,10 @@ header #menu span {
   }
   header {
     padding: 10px 20px;
+    border-bottom: 1px solid #ebebeb;
   }
   header .logo {
-    max-width: 50px;
+    max-width: 60px;
     margin-top: 10px;
   }
   header #menu {
@@ -258,7 +263,7 @@ header #menu span {
     top: 80px;
     right: 20px;
     width: 200px;
-    height: 210px;
+    height: 170px;
     padding: 0;
     border-radius: 6px;
     background-color: #22282a;
@@ -271,6 +276,9 @@ header #menu span {
   }
   header ul.active {
     display: block;
+  }
+  header ul.active a {
+    color: #fff;
   }
   .content {
     flex-direction: column;
@@ -287,7 +295,7 @@ header #menu span {
     font-weight: 400;
   }
   .content .text h2 {
-    font-size: 1.6em;
+    font-size: 3em;
   }
   .content .img {
     width: 100%;
@@ -314,20 +322,20 @@ header #menu span {
 
 @media (max-width: 500px) {
   .content .text h2 {
-    font-size: 1.6em;
+    font-size: 2.5em;
   }
   .thumb li img {
     max-width: 40px;
   }
 }
-/* @media (max-width: 400px) {
-  .circle {
-    top: 330px;
+@media (max-width: 400px) {
+  .content .text h2 {
+    font-size: 2em;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 320px) {
   .content .text h2 {
     font-size: 1.6em;
+  }
 }
-} */
 /* End media */
